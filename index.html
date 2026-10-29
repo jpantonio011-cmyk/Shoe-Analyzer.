@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Shoe Analyzer · Oxford AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">🌙</button>
+
+    <h1>👟 Shoe Analyzer</h1>
+    <div class="subhead" id="subheadText">Opening camera automatically… Please point your camera at the shoes.</div>
+
+    <!-- Camera View -->
+    <div class="camera-view" id="cameraView" style="display: none;">
+      <video id="cameraStream" autoplay playsinline></video>
+      <div class="camera-controls">
+        <button class="btn-secondary" id="closeCameraBtn">Cancel</button>
+        <button class="btn-primary" id="captureBtn">📸 Capture</button>
+      </div>
+    </div>
+
+    <!-- Status / Loading / Error -->
+    <div class="status-message" id="statusMsg"></div>
+
+    <!-- Result Card -->
+    <div class="result-card" id="resultCard" style="display: none;">
+      <div class="result-title">
+        <span>📋</span> Shoe Analysis
+      </div>
+      <div id="responseText" class="ai-response"></div>
+    </div>
+
+    <div class="footer-note">
+      Oxford AI · Available in the Philippines · Max 1 image, 5MB
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
